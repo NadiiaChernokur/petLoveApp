@@ -5,7 +5,7 @@ import { Provider } from 'react-redux';
 import App from './App';
 import './index.css';
 import 'modern-normalize/modern-normalize.css';
-import { persistor, store } from './redux/store.jsx';
+import { persistor, store } from './redux/store';
 import { PersistGate } from 'redux-persist/integration/react';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
