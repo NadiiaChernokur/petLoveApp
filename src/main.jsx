@@ -4,6 +4,7 @@ import ReactDOM from 'react-dom/client';
 import { Provider } from 'react-redux';
 import App from './App.jsx';
 import './index.css';
+import 'modern-normalize/modern-normalize.css';
 import { persistor, store } from './redux/store.jsx';
 import { PersistGate } from 'redux-persist/integration/react';
 

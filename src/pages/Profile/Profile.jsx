@@ -24,7 +24,7 @@ const Profile = () => {
 
         safeToken(user.token);
         const res = await dispatch(getCurrentUser());
-        console.log(res);
+
         if (res.error?.message === 'Rejected') {
           toast(res.payload);
         }
