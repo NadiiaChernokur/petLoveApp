@@ -24,6 +24,9 @@ export const NoticesTitel = styled.h3`
   margin-bottom: 40px;
   position: relative;
   right: -42px;
+  @media screen and (max-width: 1280px) {
+    right: 0;
+  }
   @media screen and (max-width: 767px) {
     font-size: 28px;
     right: 0;

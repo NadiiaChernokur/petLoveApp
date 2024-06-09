@@ -53,7 +53,7 @@ export const AddPetFormContainer = styled.div`
   border-radius: 60px;
   width: 592px;
   min-width: 592px;
-  height: 654px;
+  /* height: 654px; */
   padding: 60px 80px;
   background: #fff;
   @media screen and (min-width: 768px) and (max-width: 1280px) {
@@ -90,6 +90,7 @@ export const AddPetRadio = styled.input`
   opacity: 0;
   position: absolute;
   pointer-events: none;
+  cursor: pointer;
 `;
 export const AddPetRadioFemaleLabel = styled.label`
   cursor: pointer;
@@ -100,7 +101,7 @@ export const AddPetRadioFemaleLabel = styled.label`
   padding: 6px;
   width: 40px;
   height: 40px;
-  background: ${($bgColor) => $bgColor || 'rgba(244, 63, 94, 0.1)'};
+  /* background: ${({ $bgColor }) => $bgColor}; */
   text-align: center;
   line-height: 40px;
 
@@ -113,9 +114,8 @@ export const AddPetRadioFemaleLabel = styled.label`
   }
 
   ${AddPetRadio}:checked + & {
-    background: ${($bgrColor) => $bgrColor};
+    background: ${({ $bgrColor }) => $bgrColor};
     stroke: #fff;
-    /* mix-blend-mode: multiply; */
   }
 `;
 // export const AddPetRadioMaleLabel = styled.label`
@@ -174,6 +174,7 @@ export const CustomButton = styled.button`
   border-radius: 30px;
   padding: 12px 16px;
   width: 146px;
+  height: 47px;
   border: none;
   white-space: nowrap;
   cursor: pointer;
@@ -182,6 +183,16 @@ export const CustomButton = styled.button`
   line-height: 129%;
   letter-spacing: -0.02em;
   color: #262626;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+
+  &:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  @media screen and (max-width: 767px) {
+    width: 117px;
+  }
 `;
 
 export const FormInputFile = styled.input`
@@ -228,6 +239,10 @@ export const BackButton = styled.button`
   line-height: 125%;
   letter-spacing: -0.03em;
   color: #262626;
+  cursor: pointer;
+  &:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
 `;
 export const SubmitButton = styled.button`
   border-radius: 30px;
@@ -241,14 +256,21 @@ export const SubmitButton = styled.button`
   line-height: 125%;
   letter-spacing: -0.03em;
   color: #fff;
+  cursor: pointer;
+  &:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
 `;
 export const AddPetSelect = styled.select`
   border: 1px solid #f6b83d;
   border-radius: 30px;
   padding: 16px;
   width: 210px;
-  /* width: 100%; */
+
   margin-bottom: 18px;
+  @media screen and (max-width: 767px) {
+    width: 143px;
+  }
 `;
 
 export const PawDiv = styled.div`
@@ -262,4 +284,18 @@ export const PawDiv = styled.div`
 `;
 export const SexDiv = styled.div`
   display: flex;
+  border-radius: 50%;
+  background: ${({ $bgColor }) => $bgColor};
+  &:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background: ${({ $bgrColor }) => $bgrColor};
+    stroke: #fff;
+    fill-opacity: 1.5;
+  }
+`;
+
+export const CalendarSvg = styled.label`
+  position: absolute;
+  top: 17px;
+  right: 17px;
 `;

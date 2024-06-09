@@ -11,11 +11,12 @@ export const NoticesItemContainer = styled.ul`
     min-width: 744px;
     padding: 0 20px;
     margin: auto;
+    justify-content: center;
   }
   @media screen and (max-width: 767px) {
     max-width: 375px;
     min-width: 375px;
-    /* padding: 0 20px; */
+    justify-content: center;
   }
 `;
 export const NoticesItemList = styled.li`
@@ -114,14 +115,20 @@ export const LearnMore = styled.button`
   line-height: 125%;
   letter-spacing: -0.03em;
   color: #fff;
+  &:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
 `;
 export const LikeButton = styled.button`
   border-radius: 30px;
-  padding: 15px;
+  padding: 14px;
   width: 48px;
   height: 48px;
   background: #fff4df;
   border: none;
+  &:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
 `;
 
 export const NoticesPDiv = styled.div`

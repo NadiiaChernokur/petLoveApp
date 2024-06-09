@@ -16,9 +16,13 @@ export const FavoritePetsButton = styled.button`
   border-radius: 30px;
   padding: 14px;
   width: 142px;
-  background: ${(props) => (props.active ? ' #f6b83d' : ' #fff')};
+  background: ${props => (props.active ? ' #f6b83d' : ' #fff')};
   border: none;
   white-space: nowrap;
+  cursor: pointer;
+  &:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
 `;
 export const FavoritePetsEmptyArray = styled.p`
   width: 458px;

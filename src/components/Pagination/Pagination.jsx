@@ -24,7 +24,7 @@ const Paginations = ({ subtract, add, page, first, last, total }) => {
           height="20"
           style={{
             transform: 'scaleX(-1)',
-            marginRight: '-12px',
+            marginRight: '-25px',
             fillOpacity: pegeGetFirst,
           }}
         >
@@ -65,7 +65,7 @@ const Paginations = ({ subtract, add, page, first, last, total }) => {
         <svg
           width="20"
           height="20"
-          style={{ marginRight: '-12px', fillOpacity: pegeGetTotal }}
+          style={{ marginRight: '-25px', fillOpacity: pegeGetTotal }}
         >
           <use href={`${sprite}#fi-rr-angle-small-left`}></use>
         </svg>

@@ -1,4 +1,4 @@
-import { useForm } from 'react-hook-form';
+import { useForm, useWatch } from 'react-hook-form';
 import React from 'react';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from 'yup';
@@ -17,6 +17,7 @@ import {
   AddPetSelect,
   BackButton,
   BirthdayDiv,
+  CalendarSvg,
   CustomButton,
   DownloadPhotoDiv,
   ErrorMessage,
@@ -35,7 +36,8 @@ import { addPet, getSpecies, safeToken } from '../../redux/operation';
 // import Select from 'react-select';
 import sprite from '../../img/sprite.svg';
 import sprit from '../../img/svg.svg';
-// import spri from '../../img/s.svg';
+import spri from '../../img/sex.svg';
+import sprsvg from '../../img/sprite2.svg';
 // import photo from '../../img/dogAddpets.png';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -58,6 +60,7 @@ const schema = yup.object().shape({
 const AddPet = () => {
   const [selectedFile, setSelectedFile] = useState(null);
   const [option, setOption] = useState([]);
+  const [selectedSex, setSelectedSex] = useState('');
 
   const dispatch = useDispatch();
   const navigate = useNavigate();
@@ -124,6 +127,10 @@ const AddPet = () => {
   const handleButtonClick = () => {
     document.getElementById('fileInput').click();
   };
+  const handleChange = event => {
+    setSelectedSex(event.target.value);
+  };
+
   return (
     <AddPetContsiner>
       <ToastContainer toastStyle={{ background: '#f30e0e', color: 'white' }} />
@@ -138,56 +145,56 @@ const AddPet = () => {
         <Form onSubmit={handleSubmit(onSubmit)}>
           <div>
             <AddPetRadioContainer>
-              <SexDiv>
+              <SexDiv $bgrColor="#f43f5e" $bgColor="rgba(244, 63, 94, 0.1)">
                 <AddPetRadio
                   type="radio"
                   id="female"
                   value="female"
                   {...register('sex')}
+                  onChange={handleChange}
                 />
 
-                <AddPetRadioFemaleLabel
-                  htmlFor="female"
-                  $bgColor="rgba(244, 63, 94, 0.1)"
-                  $bgrColor=" #f43f5e"
-                >
-                  <svg width="24" height="24">
-                    <use href={`${sprite}#female`}></use>
-                  </svg>
+                <AddPetRadioFemaleLabel htmlFor="female" $bgrColor="#f43f5e">
+                  {selectedSex === 'female' ? (
+                    <svg width="24" height="24">
+                      <use href={`${spri}#femaleW`}></use>
+                    </svg>
+                  ) : (
+                    <svg width="24" height="24">
+                      <use href={`${sprite}#female`}></use>
+                    </svg>
+                  )}
                 </AddPetRadioFemaleLabel>
               </SexDiv>
-              <SexDiv>
+              <SexDiv $bgrColor="#3fd6f4" $bgColor="rgba(84, 173, 255, 0.1)">
                 <AddPetRadio
                   type="radio"
                   id="male"
                   value="male"
                   {...register('sex')}
+                  onChange={handleChange}
                 />
-                <AddPetRadioFemaleLabel
-                  htmlFor="male"
-                  $bgColor="rgba(84, 173, 255, 0.1)"
-                  $bgrColor=" #3fd6f4"
-                >
-                  <svg width="24" height="24">
-                    <use href={`${sprite}#male`}></use>
-                  </svg>
-                  {/* <svg width="24" height="24">
-                    <use href={`${spri}#femalew`}></use>
-                  </svg> */}
+                <AddPetRadioFemaleLabel htmlFor="male" $bgrColor="#3fd6f4">
+                  {selectedSex === 'male' ? (
+                    <svg width="24" height="24">
+                      <use href={`${spri}#maleW`}></use>
+                    </svg>
+                  ) : (
+                    <svg width="24" height="24">
+                      <use href={`${sprite}#male`}></use>
+                    </svg>
+                  )}
                 </AddPetRadioFemaleLabel>
               </SexDiv>
-              <SexDiv>
+              <SexDiv $bgrColor="#f7bf4e" $bgColor="#fff4df">
                 <AddPetRadio
                   type="radio"
                   id="multiple"
                   value="multiple"
                   {...register('sex')}
+                  onChange={handleChange}
                 />
-                <AddPetRadioFemaleLabel
-                  htmlFor="multiple"
-                  $bgColor="#fff4df"
-                  $bgrColor=" #f7bf4e"
-                >
+                <AddPetRadioFemaleLabel htmlFor="multiple" $bgrColor=" #f7bb41">
                   <svg width="24" height="24">
                     <use
                       href={`${sprite}#healthicons_sexual-reproductive-health`}
@@ -209,7 +216,12 @@ const AddPet = () => {
           </PawDiv>
           {/* <AddPetPhoto src={selectedFile} alt={'title'}></AddPetPhoto> */}
           <DownloadPhotoDiv>
-            <FormInputFile value={selectedFile} />
+            <div>
+              <FormInputFile value={selectedFile} />
+              {errors.imgURL && (
+                <ErrorMessage>{errors.imgURL.message}</ErrorMessage>
+              )}
+            </div>
             <AddPetAddPhoto
               {...register('imgURL')}
               id="fileInput"
@@ -217,11 +229,14 @@ const AddPet = () => {
               accept="image/png, image/jpeg, image/gif, image/bmp, image/webp"
               onChange={handleFileChange}
             />
-            {errors.imgURL && (
+            {/* {errors.imgURL && (
               <ErrorMessage>{errors.imgURL.message}</ErrorMessage>
-            )}
+            )} */}
             <CustomButton type="button" onClick={handleButtonClick}>
               Upload Photo
+              <svg width="18" height="18">
+                <use href={`${sprsvg}#upload-cloud`}></use>
+              </svg>
             </CustomButton>
           </DownloadPhotoDiv>
           <div>
@@ -237,36 +252,34 @@ const AddPet = () => {
             {errors.name && <ErrorMessage>{errors.name.message}</ErrorMessage>}
           </div>
           <BirthdayDiv>
-            <div>
-              <label></label>
+            <div style={{ position: 'relative' }}>
               <FormInput {...register('birthday')} placeholder="0000.00.00" />
               {errors.birthday && (
                 <ErrorMessage>{errors.birthday.message}</ErrorMessage>
               )}
+              <CalendarSvg>
+                <svg width="18" height="18">
+                  <use href={`${sprite}#calendar`}></use>
+                </svg>
+              </CalendarSvg>
             </div>
-            {/* <div>
-              <label></label>
-              <FormInput {...register('species')} placeholder="Type of pet" />
+            <div>
+              <AddPetSelect
+                name="species"
+                {...register('species')}
+                onChange={e => setValue('species', e.target.value)}
+              >
+                <option value="">Type of pet</option>
+                {option?.map((petType, index) => (
+                  <option key={index} value={petType}>
+                    {petType}
+                  </option>
+                ))}
+              </AddPetSelect>
               {errors.species && (
                 <ErrorMessage>{errors.species.message}</ErrorMessage>
               )}
-            </div> */}
-
-            <AddPetSelect
-              name="species"
-              {...register('species')}
-              onChange={e => setValue('species', e.target.value)}
-            >
-              <option value="">Type of pet</option>
-              {option?.map((petType, index) => (
-                <option key={index} value={petType}>
-                  {petType}
-                </option>
-              ))}
-            </AddPetSelect>
-            {errors.species && (
-              <ErrorMessage>{errors.species.message}</ErrorMessage>
-            )}
+            </div>
           </BirthdayDiv>
           <AddPetButtonsDiv>
             <BackButton type="button" onClick={handleBack}>

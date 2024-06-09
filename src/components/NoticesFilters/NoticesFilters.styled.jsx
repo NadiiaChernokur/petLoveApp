@@ -51,6 +51,9 @@ export const NoticesField = styled(Field)`
   /* -webkit-appearance: none;
   -moz-appearance: none; */
   appearance: none;
+  &:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
   @media screen and (max-width: 767px) {
     width: 100%;
   }
@@ -92,6 +95,9 @@ export const CheckboxLabel = styled.label`
   padding: 14px;
   background: #fff;
   text-align: center;
+  &:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
 
   ${CheckboxInput}:checked + & {
     background-color: green;
@@ -136,6 +142,6 @@ export const LocationDiv = styled.div`
   @media screen and (max-width: 767px) {
     display: flex;
     gap: 8px;
-    width: 295px;
+    width: 335px;
   }
 `;

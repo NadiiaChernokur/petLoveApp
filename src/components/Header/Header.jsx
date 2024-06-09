@@ -34,7 +34,7 @@ export const Header = () => {
   const data = useSelector(state => state.logIn);
 
   const location = useLocation();
-  const isHomePage = location.pathname === '/home';
+  const isHomePage = location.pathname === '/home' || location.pathname === '/';
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
@@ -69,7 +69,7 @@ export const Header = () => {
   };
   const isNotAuth = !isUserRegster || data.length === 0;
   return (
-    <HeaderContainer>
+    <HeaderContainer $isHomePage={isHomePage}>
       {isBurgerMenuOpen && (
         <BurgerMenu
           close={closeBurgerMenu}

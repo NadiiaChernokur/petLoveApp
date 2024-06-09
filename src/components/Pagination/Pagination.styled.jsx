@@ -32,6 +32,7 @@ export const Pages = styled.div`
   margin: 0 16px;
   @media screen and (max-width: 767px) {
     margin: 0;
+    gap: 5px;
   }
 `;
 
@@ -48,8 +49,8 @@ export const PageSpan = styled.span`
   font-size: 18px;
   line-height: 122%;
   @media screen and (max-width: 767px) {
-    width: 40px;
-    height: 40px;
+    width: 33px;
+    height: 33px;
   }
 `;
 export const PageSpanActiv = styled.span`
@@ -66,4 +67,8 @@ export const PageSpanActiv = styled.span`
   font-size: 18px;
   line-height: 122%;
   text-align: center;
+  @media screen and (max-width: 767px) {
+    width: 33px;
+    height: 33px;
+  }
 `;

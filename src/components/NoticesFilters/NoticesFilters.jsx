@@ -34,6 +34,12 @@ const customStyles = {
     borderRadius: '30px',
     padding: '6px',
     width: '100%',
+    '@media (min-width: 768px)': {
+      width: '227px',
+    },
+    '@media (max-width: 767px)': {
+      width: '332px',
+    },
   }),
   menu: provided => ({
     ...provided,

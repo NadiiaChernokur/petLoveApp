@@ -2,15 +2,18 @@ import styled from '@emotion/styled';
 export const FriendsContainer = styled.div`
   width: 1193px;
   padding: 0 20px;
+  padding-bottom: 20px;
   margin: 64px auto;
   @media screen and (min-width: 768px) and (max-width: 1280px) {
     width: 744px;
     padding: 0 20px;
+    padding-bottom: 20px;
   }
   @media screen and (max-width: 767px) {
     width: 335px;
     margin: auto;
     padding: 0;
+    padding-bottom: 20px;
   }
 `;
 
@@ -67,6 +70,9 @@ export const FriendImg = styled.img`
   width: 90px;
   height: 90px;
   cursor: pointer;
+  /* &:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  } */
 `;
 export const FriendsInfDiv = styled.div`
   width: 196px;
@@ -82,7 +88,7 @@ export const FriendName = styled.p`
 `;
 
 export const Information = styled.p`
-  width: 236px;
+  width: 100%;
   font-weight: 500;
   font-size: 14px;
   line-height: 129%;
@@ -101,10 +107,15 @@ export const Information = styled.p`
     white-space: inherit;
     height: auto;
   }
+
   @media screen and (max-width: 767px) {
     width: 100%;
   }
 `;
 export const InformationSpan = styled.span`
   color: rgba(38, 38, 38, 0.5);
+  width: 100%;
+  &:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
 `;

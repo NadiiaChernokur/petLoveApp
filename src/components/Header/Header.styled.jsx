@@ -2,31 +2,39 @@ import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
 
 export const HeaderContainer = styled.div`
-  min-width: 1282px;
-  /* padding: 32px 64px; */
-  padding: 32px 130px;
+  /* min-width: 1216px;
+  max-width: 1216px;
+  padding: 32px 64px; */
+  min-width: 1216px;
+  max-width: 1216px;
+  padding: 32px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   position: relative;
   z-index: 5;
+  margin: auto;
   @media screen and (min-width: 768px) and (max-width: 1280px) {
-    max-width: 770px;
-    min-width: 770px;
-    padding: 32px;
+    max-width: 704px;
+    min-width: 704px;
+    padding: ${({ $isHomePage }) => ($isHomePage ? '32px' : '32px 0')};
     margin: auto;
   }
   @media screen and (max-width: 767px) {
-    max-width: 375px;
-    min-width: 375px;
-    padding: 24px 20px;
+    max-width: 335px;
+    min-width: 335px;
+    padding: 24px 0px;
     margin: auto;
   }
 `;
 export const HeaderLogo = styled.h2`
   display: flex;
   align-items: center;
+  cursor: pointer;
   color: ${({ $isHomePage }) => ($isHomePage ? '#fff' : '#262626')};
+  &:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
 `;
 export const HeaderLogoSvg = styled.svg`
   width: 19px;
@@ -53,6 +61,9 @@ export const NavigationLink = styled(NavLink)`
     $isActive ? '1px solid #f6b83d' : '1px solid rgba(38, 38, 38, 0.15)'};
   border-radius: 30px;
   text-decoration: none;
+  &:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
 `;
 export const NavigationP = styled.p`
   padding: 15px 20px;
@@ -72,7 +83,7 @@ export const NavigationP = styled.p`
 export const ButtonsDiv = styled.div`
   display: flex;
   gap: 8px;
-  @media screen and (max-width: 767px) {
+  @media screen and (max-width: 1280px) {
     display: none;
   }
 `;
@@ -114,6 +125,9 @@ export const ButtonLog = styled.button`
   letter-spacing: -0.03em;
   text-transform: uppercase;
   color: #fff;
+  &:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
 `;
 export const ButtonLogOut = styled.button`
   all: unset;
@@ -144,10 +158,16 @@ export const ButtonReg = styled.button`
   text-transform: uppercase;
   color: #f6b83d;
   border: none;
+  &:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
 `;
 export const BurgerDivSvg = styled.div`
   display: none;
   @media screen and (max-width: 1280px) {
     display: block;
+  }
+  &:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   }
 `;

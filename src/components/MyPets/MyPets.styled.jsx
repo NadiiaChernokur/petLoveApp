@@ -48,6 +48,10 @@ export const MyPetsDeliteButton = styled.button`
   height: 38px;
   background: #fff4df;
   border: none;
+  cursor: pointer;
+  &:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
   @media screen and (min-width: 768px) and (max-width: 1280px) {
     position: absolute;
     top: 13px;

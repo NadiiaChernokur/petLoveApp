@@ -120,6 +120,9 @@ export const LearnMoreModalButton = styled.a`
   cursor: pointer;
   display: flex;
   justify-content: center;
+  &:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
 `;
 
 export const LearnMoreModalAdd = styled.button`
@@ -139,4 +142,7 @@ export const LearnMoreModalAdd = styled.button`
   justify-content: center;
   gap: 8px;
   cursor: pointer;
+  &:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
 `;

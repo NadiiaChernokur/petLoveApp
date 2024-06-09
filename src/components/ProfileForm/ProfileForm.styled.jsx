@@ -92,6 +92,9 @@ export const UploadPhotoButton = styled.button`
   color: #262626;
   background: none;
   border: none;
+  &:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
 `;
 
 export const UploadPhotoDiv = styled.div`
@@ -110,6 +113,10 @@ export const UploadUserButton = styled.button`
   width: 38px;
   height: 38px;
   background: #fff4df;
+  cursor: pointer;
+  &:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
 `;
 export const MyInformation = styled.p`
   font-weight: 700;
@@ -174,6 +181,10 @@ export const AddPetButton = styled.button`
   display: flex;
   align-items: center;
   gap: 4px;
+  cursor: pointer;
+  &:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
 `;
 export const AddPetButtonSpan = styled.span`
   font-weight: 20;
@@ -194,6 +205,10 @@ export const LogoutButton = styled.button`
   text-transform: uppercase;
   color: #f6b83d;
   margin-top: 80px;
+  cursor: pointer;
+  &:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
 `;
 export const ErrorMessage = styled.div`
   color: red;
