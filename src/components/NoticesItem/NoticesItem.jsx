@@ -45,18 +45,25 @@ const NoticesItem = ({ array, del }) => {
     const fetchUser = async () => {
       const storedUserData = localStorage.getItem('petLoveUserData');
 
-      if (storedUserData !== '[]') {
+      if (storedUserData && storedUserData !== '[]') {
         const user = JSON.parse(storedUserData);
 
-        safeToken(user?.token);
-        setIsToken(user?.token);
-        const res = await dispatch(getCurrentUser());
-        if (res.payload.noticesFavorites?.length > 0) {
-          const favoriteIds = res.payload.noticesFavorites.map(
-            item => item._id
-          );
-          setHeartClick(favoriteIds);
+        if (user?.token) {
+          safeToken(user.token);
+          setIsToken(user.token);
+
+          const res = await dispatch(getCurrentUser());
+          if (res.payload.noticesFavorites?.length > 0) {
+            const favoriteIds = res.payload.noticesFavorites.map(
+              item => item._id
+            );
+            setHeartClick(favoriteIds);
+          }
+        } else {
+          return;
         }
+      } else {
+        return;
       }
     };
     fetchUser();

@@ -1,4 +1,4 @@
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import NoticesFilters from '../../components/NoticesFilters/NoticesFilters';
 import NoticesItem from '../../components/NoticesItem/NoticesItem';
 import Paginations from '../../components/Pagination/Pagination';
@@ -6,7 +6,7 @@ import { NoticesContainer, NoticesTitel } from './Notices.styled';
 import { useEffect, useState } from 'react';
 import { getNotices } from '../../redux/operation';
 import React from 'react';
-import { Loader } from 'components/Loader/Loader';
+import { Loader } from '../../components/Loader/Loader';
 const Notices = () => {
   const [noticesArray, setNoticesArray] = useState([]);
   const [newArray, setNewArray] = useState([]);
