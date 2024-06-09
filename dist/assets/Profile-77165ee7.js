@@ -1,4 +1,4 @@
-import{p as i,r as s,j as e,a as y,s as $,x as q,u as U,L as O,y as V,z as Y,M as _,A as J,B as K,C as Q,t as Z,D as G}from"./index-29781df6.js";import{N as z,A as H}from"./NoticesItem-4e8113f5.js";import{u as N,o as W}from"./yup-fe022c44.js";import{c as X,a as b,Q as F,B as I}from"./ReactToastify-5330041a.js";import{p as D}from"./cat-8a2618ae.js";import"./dog-26b760a7.js";const ee=i.div`
+import{p as i,r,j as e,a as y,s as A,x as q,u as U,L as $,y as O,z as Y,M as _,A as J,B as K,C as Q,t as Z,D as G}from"./index-f2e9fc0e.js";import{N as L,A as H}from"./NoticesItem-43bc3770.js";import{u as V,o as W,s as S}from"./sprite2-8143aca6.js";import{c as X,a as b,Q as F,B as N}from"./ReactToastify-3d54d9f2.js";import{p as D}from"./cat-8a2618ae.js";import"./dog-26b760a7.js";import"./Loader-65e65c94.js";const ee=i.div`
   width: 678px;
   @media screen and (max-width: 767px) {
     width: 335px;
@@ -7,13 +7,17 @@ import{p as i,r as s,j as e,a as y,s as $,x as q,u as U,L as O,y as V,z as Y,M a
   display: flex;
   gap: 8px;
   margin-bottom: 32px;
-`,B=i.button`
+`,z=i.button`
   border-radius: 30px;
   padding: 14px;
   width: 142px;
   background: ${t=>t.active?" #f6b83d":" #fff"};
   border: none;
   white-space: nowrap;
+  cursor: pointer;
+  &:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
 `,ie=i.p`
   width: 458px;
   font-weight: 500;
@@ -27,7 +31,7 @@ import{p as i,r as s,j as e,a as y,s as $,x as q,u as U,L as O,y as V,z as Y,M a
 `,ne=i.span`
   font-weight: 700;
   color: #f6b83d;
-`,oe=({favoritsPets:t,viewed:d})=>{const[n,c]=s.useState("favorites"),[a,o]=s.useState([]);s.useEffect(()=>{o(t)},[t]);const r=l=>{c(l)};return e.jsxs(ee,{children:[e.jsxs(te,{children:[e.jsx(B,{active:n==="favorites",onClick:()=>r("favorites"),children:"My favorite pets"}),e.jsx(B,{active:n==="viewed",onClick:()=>r("viewed"),children:"Viewed"})]}),n==="favorites"?(a==null?void 0:a.length)>0?e.jsx(z,{array:a,del:!0}):e.jsxs(ie,{children:["Oops,",e.jsx(ne,{children:"looks like there aren't any furries"}),'on our adorable page yet. Do not worry! View your pets on the "find your favorite pet" page and add them to your favorites.']}):e.jsx(z,{array:d,del:!0})]})},ae=i.div`
+`,oe=({favoritsPets:t,viewed:d})=>{const[n,l]=r.useState("favorites"),[a,o]=r.useState([]);r.useEffect(()=>{o(t)},[t]);const s=x=>{l(x)};return e.jsxs(ee,{children:[e.jsxs(te,{children:[e.jsx(z,{active:n==="favorites",onClick:()=>s("favorites"),children:"My favorite pets"}),e.jsx(z,{active:n==="viewed",onClick:()=>s("viewed"),children:"Viewed"})]}),n==="favorites"?(a==null?void 0:a.length)>0?e.jsx(L,{array:a,del:!0}):e.jsxs(ie,{children:["Oops,",e.jsx(ne,{children:"looks like there aren't any furries"}),'on our adorable page yet. Do not worry! View your pets on the "find your favorite pet" page and add them to your favorites.']}):e.jsx(L,{array:d,del:!0})]})},ae=i.div`
   border-radius: 60px;
   width: 520px;
   background: #fff;
@@ -53,7 +57,7 @@ import{p as i,r as s,j as e,a as y,s as $,x as q,u as U,L as O,y as V,z as Y,M a
   /* @media screen and (max-width: 767px) {
     justify-content: space-between;
   } */
-`,se=i.div`
+`,re=i.div`
   border-radius: 30px;
   padding: 10px 14px;
   width: 80px;
@@ -68,7 +72,7 @@ import{p as i,r as s,j as e,a as y,s as $,x as q,u as U,L as O,y as V,z as Y,M a
   align-items: center;
   justify-content: center;
   gap: 4px;
-`,re=i.img`
+`,se=i.img`
   /* border-radius: 100px;
   width: 110px;
   height: 110px;
@@ -98,7 +102,7 @@ import{p as i,r as s,j as e,a as y,s as $,x as q,u as U,L as O,y as V,z as Y,M a
   margin-bottom: 8px;  */
 `,R=i.input`
   display: none;
-`,le=i.button`
+`,xe=i.button`
   font-weight: 500;
   font-size: 14px;
   line-height: 129%;
@@ -108,7 +112,10 @@ import{p as i,r as s,j as e,a as y,s as $,x as q,u as U,L as O,y as V,z as Y,M a
   color: #262626;
   background: none;
   border: none;
-`,xe=i.div`
+  &:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+`,ce=i.div`
   display: flex;
   flex-direction: column;
   @media screen and (max-width: 767px) {
@@ -116,13 +123,17 @@ import{p as i,r as s,j as e,a as y,s as $,x as q,u as U,L as O,y as V,z as Y,M a
     left: 95px;
     top: 36px;
   }
-`,ce=i.button`
+`,le=i.button`
   border-radius: 30px;
   border: none;
   padding: 10px;
   width: 38px;
   height: 38px;
   background: #fff4df;
+  cursor: pointer;
+  &:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
 `,he=i.p`
   font-weight: 700;
   font-size: 18px;
@@ -179,6 +190,10 @@ import{p as i,r as s,j as e,a as y,s as $,x as q,u as U,L as O,y as V,z as Y,M a
   display: flex;
   align-items: center;
   gap: 4px;
+  cursor: pointer;
+  &:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
 `,we=i.span`
   font-weight: 20;
   font-size: 25px;
@@ -197,10 +212,14 @@ import{p as i,r as s,j as e,a as y,s as $,x as q,u as U,L as O,y as V,z as Y,M a
   text-transform: uppercase;
   color: #f6b83d;
   margin-top: 80px;
+  cursor: pointer;
+  &:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
 `,w=i.div`
   color: red;
   font-size: 12px;
-`,S="/assets/sprite2-c2f414f6.svg",je=i.ul`
+`,je=i.ul`
   display: flex;
   flex-direction: column;
   gap: 14px;
@@ -245,6 +264,10 @@ import{p as i,r as s,j as e,a as y,s as $,x as q,u as U,L as O,y as V,z as Y,M a
   height: 38px;
   background: #fff4df;
   border: none;
+  cursor: pointer;
+  &:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
   @media screen and (min-width: 768px) and (max-width: 1280px) {
     position: absolute;
     top: 13px;
@@ -284,7 +307,7 @@ import{p as i,r as s,j as e,a as y,s as $,x as q,u as U,L as O,y as V,z as Y,M a
     width: 153px;
     align-items: flex-start;
   }
-`,Ee=({pets:t})=>{const[d,n]=s.useState([]),c=y();s.useEffect(()=>{n(t)},[t]);const a=async o=>{await c(q(o)),n(r=>r.filter(l=>l._id!==o))};return e.jsx(je,{children:d==null?void 0:d.map(o=>e.jsxs(ve,{children:[e.jsxs(Ce,{children:[e.jsx("div",{children:e.jsx(ye,{src:o.imgURL})}),e.jsxs("div",{children:[e.jsx(Pe,{children:o.title}),e.jsxs(Me,{children:[e.jsxs("div",{children:[e.jsx(j,{children:"Name"}),e.jsx("p",{children:o.name})]}),e.jsxs("div",{children:[e.jsx(j,{children:"Birthday"}),e.jsx("p",{children:o.birthday})]}),e.jsxs("div",{children:[e.jsx(j,{children:"Sex"}),e.jsx("p",{children:o.sex})]}),e.jsxs("div",{children:[e.jsx(j,{children:"Species"}),e.jsx("p",{children:o.species})]})]})]})]}),e.jsx(ke,{onClick:()=>a(o._id),children:e.jsx("svg",{width:"18",height:"18",children:e.jsx("use",{href:`${$}#trash-2`})})})]},o._id))})},Se=i.div`
+`,Ee=({pets:t})=>{const[d,n]=r.useState([]),l=y();r.useEffect(()=>{n(t)},[t]);const a=async o=>{await l(q(o)),n(s=>s.filter(x=>x._id!==o))};return e.jsx(je,{children:d==null?void 0:d.map(o=>e.jsxs(ve,{children:[e.jsxs(Ce,{children:[e.jsx("div",{children:e.jsx(ye,{src:o.imgURL})}),e.jsxs("div",{children:[e.jsx(Pe,{children:o.title}),e.jsxs(Me,{children:[e.jsxs("div",{children:[e.jsx(j,{children:"Name"}),e.jsx("p",{children:o.name})]}),e.jsxs("div",{children:[e.jsx(j,{children:"Birthday"}),e.jsx("p",{children:o.birthday})]}),e.jsxs("div",{children:[e.jsx(j,{children:"Sex"}),e.jsx("p",{children:o.sex})]}),e.jsxs("div",{children:[e.jsx(j,{children:"Species"}),e.jsx("p",{children:o.species})]})]})]})]}),e.jsx(ke,{onClick:()=>a(o._id),children:e.jsx("svg",{width:"18",height:"18",children:e.jsx("use",{href:`${A}#trash-2`})})})]},o._id))})},Se=i.div`
   position: fixed;
   z-index: 100;
   left: 0;
@@ -390,14 +413,14 @@ import{p as i,r as s,j as e,a as y,s as $,x as q,u as U,L as O,y as V,z as Y,M a
   height: 110px;
   margin: auto;
   margin-bottom: 12px;
-`,A=i.img`
+`,B=i.img`
   border-radius: 100px;
   width: 110px;
   height: 110px;
   background: #fff4df;
   display: flex;
   margin-bottom: 8px;
-`,$e=X().shape({name:b(),email:b().matches(/^[\w-]+(\.[\w-]+)*@([\w-]+\.)+[a-zA-Z]{2,7}$/,"Invalid email address").required("Email is required"),avatar:b().matches(/^https?:\/\/.*\.(?:png|jpg|jpeg|gif|bmp|webp)$/,"Invalid URL for avatar"),phone:b().matches(/^\+38\d{10}$/,"Invalid phone number")}),Oe=({user:t,close:d})=>{const[n,c]=s.useState(""),a=y(),o=U(),{register:r,handleSubmit:l,setValue:p,formState:{errors:x}}=N({resolver:W($e)}),g=s.useCallback(h=>{h.key==="Escape"&&d()},[d]);s.useEffect(()=>(document.addEventListener("keydown",g),()=>{document.removeEventListener("keydown",g)}),[g]);const u=h=>{h.target===h.currentTarget&&d()};s.useEffect(()=>{t!=null&&t.avatar&&p("avatar",t.avatar)},[t,p]);const m=async h=>{try{(await a(Y(h))).meta.requestStatus==="fulfilled"?(d(),o("/profile")):I("You are not authorized")}catch(f){alert("Error updating user: "+f.message)}},k=h=>{const f=h.target.files[0];if(f){const L=URL.createObjectURL(f),T=L.replace("blob:","")+".png";c(L),p("avatar",T)}},P=()=>{document.getElementById("avat").click()};return e.jsxs(Se,{onClick:u,children:[e.jsx(F,{toastStyle:{background:"#f30e0e",color:"white"}}),e.jsxs(Ue,{children:[e.jsx(O,{width:"24",height:"24",onClick:d,children:e.jsx("use",{href:`${V}#x-x`})}),e.jsx(Fe,{children:"Edit information"}),e.jsxs("form",{onSubmit:l(m),children:[e.jsxs(Ae,{children:[n?e.jsx(A,{src:n,alt:"selected photo"}):t!=null&&t.avatar?e.jsx(A,{src:t.avatar,alt:"user photo"}):e.jsx("svg",{width:"50",height:"50",children:e.jsx("use",{href:`${S}#user-02`})}),e.jsx(R,{...r("avatar"),id:"avat",type:"file",accept:"image/png, image/jpeg, image/gif, image/bmp, image/webp",onChange:k})]}),e.jsxs(ze,{children:[e.jsxs("div",{children:[e.jsx(Le,{value:n||(t==null?void 0:t.avatar)||"",readOnly:!0}),x.avatar&&e.jsx(v,{children:x.avatar.message})]}),e.jsxs(Be,{type:"button",onClick:P,children:["Upload photo",e.jsx("svg",{width:"18",height:"18",children:e.jsx("use",{href:`${S}#upload-cloud`})})]})]}),e.jsxs("div",{children:[e.jsx(E,{id:"name",...r("name"),defaultValue:t==null?void 0:t.name,placeholder:"Name"}),x.name&&e.jsx(v,{children:x.name.message})]}),e.jsxs("div",{children:[e.jsx(E,{id:"email",...r("email"),defaultValue:t==null?void 0:t.email,placeholder:"Email"}),x.email&&e.jsx(v,{children:x.email.message})]}),e.jsxs("div",{children:[e.jsx(E,{id:"phone",...r("phone"),defaultValue:(t==null?void 0:t.phone)||"+380",placeholder:"+380",type:"text"}),x.phone&&e.jsx(v,{children:x.phone.message})]}),e.jsx(Ie,{type:"submit",children:"Save"})]})]})]})},Ve=i.div`
+`,$e=X().shape({name:b(),email:b().matches(/^[\w-]+(\.[\w-]+)*@([\w-]+\.)+[a-zA-Z]{2,7}$/,"Invalid email address").required("Email is required"),avatar:b().matches(/^https?:\/\/.*\.(?:png|jpg|jpeg|gif|bmp|webp)$/,"Invalid URL for avatar"),phone:b().matches(/^\+38\d{10}$/,"Invalid phone number")}),Oe=({user:t,close:d})=>{const[n,l]=r.useState(""),a=y(),o=U(),{register:s,handleSubmit:x,setValue:p,formState:{errors:c}}=V({resolver:W($e)}),g=r.useCallback(h=>{h.key==="Escape"&&d()},[d]);r.useEffect(()=>(document.addEventListener("keydown",g),()=>{document.removeEventListener("keydown",g)}),[g]);const u=h=>{h.target===h.currentTarget&&d()};r.useEffect(()=>{t!=null&&t.avatar&&p("avatar",t.avatar)},[t,p]);const m=async h=>{try{(await a(Y(h))).meta.requestStatus==="fulfilled"?(d(),o("/profile")):N("You are not authorized")}catch(f){alert("Error updating user: "+f.message)}},k=h=>{const f=h.target.files[0];if(f){const I=URL.createObjectURL(f),T=I.replace("blob:","")+".png";l(I),p("avatar",T)}},P=()=>{document.getElementById("avat").click()};return e.jsxs(Se,{onClick:u,children:[e.jsx(F,{toastStyle:{background:"#f30e0e",color:"white"}}),e.jsxs(Ue,{children:[e.jsx($,{width:"24",height:"24",onClick:d,children:e.jsx("use",{href:`${O}#x-x`})}),e.jsx(Fe,{children:"Edit information"}),e.jsxs("form",{onSubmit:x(m),children:[e.jsxs(Ae,{children:[n?e.jsx(B,{src:n,alt:"selected photo"}):t!=null&&t.avatar?e.jsx(B,{src:t.avatar,alt:"user photo"}):e.jsx("svg",{width:"50",height:"50",children:e.jsx("use",{href:`${S}#user-02`})}),e.jsx(R,{...s("avatar"),id:"avat",type:"file",accept:"image/png, image/jpeg, image/gif, image/bmp, image/webp",onChange:k})]}),e.jsxs(ze,{children:[e.jsxs("div",{children:[e.jsx(Le,{value:n||(t==null?void 0:t.avatar)||"",readOnly:!0}),c.avatar&&e.jsx(v,{children:c.avatar.message})]}),e.jsxs(Be,{type:"button",onClick:P,children:["Upload photo",e.jsx("svg",{width:"18",height:"18",children:e.jsx("use",{href:`${S}#upload-cloud`})})]})]}),e.jsxs("div",{children:[e.jsx(E,{id:"name",...s("name"),defaultValue:t==null?void 0:t.name,placeholder:"Name"}),c.name&&e.jsx(v,{children:c.name.message})]}),e.jsxs("div",{children:[e.jsx(E,{id:"email",...s("email"),defaultValue:t==null?void 0:t.email,placeholder:"Email"}),c.email&&e.jsx(v,{children:c.email.message})]}),e.jsxs("div",{children:[e.jsx(E,{id:"phone",...s("phone"),defaultValue:(t==null?void 0:t.phone)||"+380",placeholder:"+380",type:"text"}),c.phone&&e.jsx(v,{children:c.phone.message})]}),e.jsx(Ie,{type:"submit",children:"Save"})]})]})]})},Ve=i.div`
   background: #fff;
   border-radius: 30px;
   width: 448px;
@@ -433,7 +456,7 @@ import{p as i,r as s,j as e,a as y,s as $,x as q,u as U,L as O,y as V,z as Y,M a
 `,Te=i.div`
   display: flex;
   gap: 8px;
-`,qe=({close:t,logout:d})=>{const n=s.useCallback(a=>{a.key==="Escape"&&t()},[t]);s.useEffect(()=>(document.addEventListener("keydown",n),()=>{document.removeEventListener("keydown",n)}),[n]);const c=a=>{a.target===a.currentTarget&&t()};return e.jsx(_,{onClick:c,children:e.jsxs(Ve,{children:[e.jsx(O,{width:"24",height:"24",onClick:t,children:e.jsx("use",{href:`${V}#x-x`})}),e.jsx(H,{children:e.jsx("img",{src:D,width:"44",height:"44"})}),e.jsx(Ne,{children:"Already leaving?"}),e.jsxs(Te,{children:[e.jsx(J,{onClick:d,children:"Yes"}),e.jsx(Re,{onClick:t,children:"Cancel"})]})]})})},Ye=({userData:t})=>{var h;const[d,n]=s.useState(!1),[c,a]=s.useState(!1),o=y(),r=U(),{register:l,formState:{errors:p}}=N({}),x=async()=>{const f=await o(Q());localStorage.setItem("petLoveUserData",JSON.stringify([])),f.error&&f.payload.includes("401")&&I("You are not authorized"),r("/home")},g=()=>{n(!0)},u=()=>{n(!1)},m=()=>{r("/add-pet")},k=()=>{a(!0)},P=()=>{a(!1)};return e.jsxs(ae,{children:[e.jsx(F,{toastStyle:{background:"#f30e0e",color:"white"}}),e.jsxs("div",{children:[e.jsxs("form",{children:[e.jsxs(de,{children:[e.jsxs(se,{children:["User",e.jsx("svg",{width:"18",height:"18",children:e.jsx("use",{href:`${S}#people`})})]}),e.jsxs(xe,{children:[e.jsxs(pe,{children:[t!=null&&t.avatar?e.jsx(re,{src:t.avatar,alt:"user photo"}):e.jsx("svg",{width:"50",height:"50",children:e.jsx("use",{href:`${K}#userr`})}),e.jsx(R,{id:"avatar",type:"file",accept:"image/png, image/jpeg, image/gif, image/bmp, image/webp",...l("avatar")}),p.avatar&&e.jsx(w,{children:p.avatar.message})]}),e.jsx(le,{type:"button",onClick:g,children:"Upload photo"})]}),e.jsx(ce,{type:"button",onClick:g,children:e.jsx("svg",{width:"16",height:"16",children:e.jsx("use",{href:`${$}#edit`})})})]}),e.jsx(he,{children:"My information"}),e.jsxs(ge,{children:[e.jsxs(M,{children:[e.jsx("label",{htmlFor:"name"}),e.jsx(C,{id:"name",...l("name"),value:t==null?void 0:t.name}),p.name&&e.jsx(w,{children:p.name.message})]}),e.jsxs(M,{children:[e.jsx("label",{htmlFor:"email"}),e.jsx(C,{id:"email",...l("email"),value:t==null?void 0:t.email}),p.email&&e.jsx(w,{children:p.email.message})]}),e.jsxs(M,{children:[e.jsx("label",{htmlFor:"phone"}),e.jsx(C,{id:"phone",...l("phone"),placeholder:"+380",value:t==null?void 0:t.phone}),p.phone&&e.jsx(w,{children:p.phone.message})]}),p.apiError&&e.jsx(w,{children:p.apiError.message})]})]}),e.jsxs(me,{children:[e.jsx(fe,{children:"My pets"}),e.jsxs(ue,{onClick:m,children:["Add pet ",e.jsx(we,{children:"+"})]})]}),((h=t==null?void 0:t.pets)==null?void 0:h.length)>0&&e.jsx(Ee,{pets:t.pets}),e.jsx(be,{onClick:k,children:"Log out"})]}),d&&e.jsx(Oe,{user:t,close:u}),c&&e.jsx(qe,{close:P,logout:x})]})},_e=i.div`
+`,qe=({close:t,logout:d})=>{const n=r.useCallback(a=>{a.key==="Escape"&&t()},[t]);r.useEffect(()=>(document.addEventListener("keydown",n),()=>{document.removeEventListener("keydown",n)}),[n]);const l=a=>{a.target===a.currentTarget&&t()};return e.jsx(_,{onClick:l,children:e.jsxs(Ve,{children:[e.jsx($,{width:"24",height:"24",onClick:t,children:e.jsx("use",{href:`${O}#x-x`})}),e.jsx(H,{children:e.jsx("img",{src:D,width:"44",height:"44"})}),e.jsx(Ne,{children:"Already leaving?"}),e.jsxs(Te,{children:[e.jsx(J,{onClick:d,children:"Yes"}),e.jsx(Re,{onClick:t,children:"Cancel"})]})]})})},Ye=({userData:t})=>{var h;const[d,n]=r.useState(!1),[l,a]=r.useState(!1),o=y(),s=U(),{register:x,formState:{errors:p}}=V({}),c=async()=>{const f=await o(Q());localStorage.setItem("petLoveUserData",JSON.stringify([])),f.error&&f.payload.includes("401")&&N("You are not authorized"),s("/home")},g=()=>{n(!0)},u=()=>{n(!1)},m=()=>{s("/add-pet")},k=()=>{a(!0)},P=()=>{a(!1)};return e.jsxs(ae,{children:[e.jsx(F,{toastStyle:{background:"#f30e0e",color:"white"}}),e.jsxs("div",{children:[e.jsxs("form",{children:[e.jsxs(de,{children:[e.jsxs(re,{children:["User",e.jsx("svg",{width:"18",height:"18",children:e.jsx("use",{href:`${S}#people`})})]}),e.jsxs(ce,{children:[e.jsxs(pe,{children:[t!=null&&t.avatar?e.jsx(se,{src:t.avatar,alt:"user photo"}):e.jsx("svg",{width:"50",height:"50",children:e.jsx("use",{href:`${K}#userr`})}),e.jsx(R,{id:"avatar",type:"file",accept:"image/png, image/jpeg, image/gif, image/bmp, image/webp",...x("avatar")}),p.avatar&&e.jsx(w,{children:p.avatar.message})]}),e.jsx(xe,{type:"button",onClick:g,children:"Upload photo"})]}),e.jsx(le,{type:"button",onClick:g,children:e.jsx("svg",{width:"16",height:"16",children:e.jsx("use",{href:`${A}#edit`})})})]}),e.jsx(he,{children:"My information"}),e.jsxs(ge,{children:[e.jsxs(M,{children:[e.jsx("label",{htmlFor:"name"}),e.jsx(C,{id:"name",...x("name"),value:t==null?void 0:t.name}),p.name&&e.jsx(w,{children:p.name.message})]}),e.jsxs(M,{children:[e.jsx("label",{htmlFor:"email"}),e.jsx(C,{id:"email",...x("email"),value:t==null?void 0:t.email}),p.email&&e.jsx(w,{children:p.email.message})]}),e.jsxs(M,{children:[e.jsx("label",{htmlFor:"phone"}),e.jsx(C,{id:"phone",...x("phone"),placeholder:"+380",value:t==null?void 0:t.phone}),p.phone&&e.jsx(w,{children:p.phone.message})]}),p.apiError&&e.jsx(w,{children:p.apiError.message})]})]}),e.jsxs(me,{children:[e.jsx(fe,{children:"My pets"}),e.jsxs(ue,{onClick:m,children:["Add pet ",e.jsx(we,{children:"+"})]})]}),((h=t==null?void 0:t.pets)==null?void 0:h.length)>0&&e.jsx(Ee,{pets:t.pets}),e.jsx(be,{onClick:k,children:"Log out"})]}),d&&e.jsx(Oe,{user:t,close:u}),l&&e.jsx(qe,{close:P,logout:c})]})},_e=i.div`
   display: flex;
   gap: 32px;
   justify-content: space-around;
@@ -449,4 +472,4 @@ import{p as i,r as s,j as e,a as y,s as $,x as q,u as U,L as O,y as V,z as Y,M a
     flex-direction: column;
     margin: auto;
   }
-`,Xe=()=>{const[t,d]=s.useState([]),[n,c]=s.useState([]),[a,o]=s.useState([]),r=y(),l=U();return s.useEffect(()=>{(async()=>{var g;const x=localStorage.getItem("petLoveUserData");if(x){const u=JSON.parse(x);Z(u.token);const m=await r(G());((g=m.error)==null?void 0:g.message)==="Rejected"&&I(m.payload),o(m.payload),d(m.payload.noticesFavorites),c(m.payload.noticesViewed)}else l("/login")})()},[r,l]),e.jsxs(_e,{children:[e.jsx(F,{toastStyle:{background:"#f30e0e",color:"white"}}),e.jsx(Ye,{userData:a}),e.jsx(oe,{favoritsPets:t,viewed:n})]})};export{Xe as default};
+`,De=()=>{const[t,d]=r.useState([]),[n,l]=r.useState([]),[a,o]=r.useState([]),s=y(),x=U();return r.useEffect(()=>{(async()=>{var g;const c=localStorage.getItem("petLoveUserData");if(c&&c!=="[]"){const u=JSON.parse(c);Z(u==null?void 0:u.token);const m=await s(G());((g=m.error)==null?void 0:g.message)==="Rejected"&&x("/login"),o(m.payload),d(m.payload.noticesFavorites),l(m.payload.noticesViewed)}else x("/login")})()},[s,x]),e.jsxs(_e,{children:[e.jsx(F,{toastStyle:{background:"#f30e0e",color:"white"}}),e.jsx(Ye,{userData:a}),e.jsx(oe,{favoritsPets:t,viewed:n})]})};export{De as default};

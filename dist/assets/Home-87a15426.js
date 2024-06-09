@@ -1,4 +1,4 @@
-import{n as i,j as e}from"./index-29781df6.js";const n="/assets/dogGirl-36b9d28b.png",t="/assets/girlDogTab-e0c68db1.png",d="/assets/girlDogM-2f2fa3ef.png",a=i.div`
+import{n as i,j as e}from"./index-f2e9fc0e.js";const n="/assets/dogGirl-36b9d28b.png",t="/assets/girlDogTab-e0c68db1.png",d="/assets/girlDogM-2f2fa3ef.png",a=i.div`
   min-width: 1282px;
   margin: auto;
   padding: 0 64px;

@@ -1,0 +1,24 @@
+import{U as a,p as h,j as c}from"./index-f2e9fc0e.js";/*! *****************************************************************************
+Copyright (c) Microsoft Corporation.
+
+Permission to use, copy, modify, and/or distribute this software for any
+purpose with or without fee is hereby granted.
+
+THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES WITH
+REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF MERCHANTABILITY
+AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY SPECIAL, DIRECT,
+INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES WHATSOEVER RESULTING FROM
+LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR
+OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR
+PERFORMANCE OF THIS SOFTWARE.
+***************************************************************************** */var i=function(){return i=Object.assign||function(s){for(var n,t=1,r=arguments.length;t<r;t++){n=arguments[t];for(var l in n)Object.prototype.hasOwnProperty.call(n,l)&&(s[l]=n[l])}return s},i.apply(this,arguments)};function f(e,s){var n={};for(var t in e)Object.prototype.hasOwnProperty.call(e,t)&&s.indexOf(t)<0&&(n[t]=e[t]);if(e!=null&&typeof Object.getOwnPropertySymbols=="function")for(var r=0,t=Object.getOwnPropertySymbols(e);r<t.length;r++)s.indexOf(t[r])<0&&Object.prototype.propertyIsEnumerable.call(e,t[r])&&(n[t[r]]=e[t[r]]);return n}var C={color:"#38ad48",enabled:!0,size:50,style:{}},g=function(e){return parseFloat(e.toString()).toString()===e.toString()?e+"px":e.toString()},p=function(e){var s=function(n){var t=n.color,r=n.enabled,l=n.size,d=n.style,o=f(n,["color","enabled","size","style"]),y=i(i({},o),{style:i({color:t,overflow:"visible",width:g(l)},d)});return r?a.createElement(e,i({},y)):null};return s.defaultProps=C,s},b={speed:100,still:!1,thickness:100},m=i(i({},b),{secondaryColor:"rgba(0,0,0,0.44)"});function v(e,s){s===void 0&&(s={});var n=s.insertAt;if(!(!e||typeof document>"u")){var t=document.head||document.getElementsByTagName("head")[0],r=document.createElement("style");r.type="text/css",n==="top"&&t.firstChild?t.insertBefore(r,t.firstChild):t.appendChild(r),r.styleSheet?r.styleSheet.cssText=e:r.appendChild(document.createTextNode(e))}}var P="@keyframes spinners-react-infinity{0%{stroke-dasharray:1,347;stroke-dashoffset:75}25%,75%{stroke-dasharray:17,330}50%{stroke-dasharray:1,347}to{stroke-dasharray:1,347;stroke-dashoffset:423}}";v(P);var k=function(e){var s=e.secondaryColor,n=e.speed,t=e.still,r=e.thickness,l=f(e,["secondaryColor","speed","still","thickness"]),d=7*(r/100),o=t?{}:{animation:"spinners-react-infinity "+140/n+"s linear infinite"};return a.createElement("svg",i({fill:"none",viewBox:"0 0 131 55"},l),a.createElement("defs",null,a.createElement("path",{d:"M46.57 45.5138C36.346 55.4954 19.8919 55.4954 9.66794 45.5138C-0.55598 35.5321 -0.55598 19.4678 9.66794 9.48624C19.8919 -0.495412 36.346 -0.495412 46.57 9.48624L84.4303 45.5138C94.6543 55.4954 111.108 55.4954 121.332 45.5138C131.556 35.5321 131.556 19.4678 121.332 9.48624C111.108 -0.495412 94.6543 -0.495412 84.4303 9.48624L46.57 45.5138Z",id:"spinners-react-infinity-path"})),a.createElement("use",{stroke:s,strokeWidth:d,xlinkHref:"#spinners-react-infinity-path"}),a.createElement("use",{fill:"none",stroke:"currentColor",strokeDasharray:"1, 347",strokeDashoffset:"75",strokeLinecap:"round",strokeWidth:d,style:o,xlinkHref:"#spinners-react-infinity-path"}))};k.defaultProps=m;var j=p(k),E="@keyframes spinners-react-diamond{25%{transform:translate(30px,-30px)}50%{transform:translate(60px)}75%{transform:translate(30px,30px)}}";v(E);var x=[{x:3,y:48},{x:18,y:33},{x:18,y:48},{x:18,y:63},{x:33,y:48},{x:33,y:18},{x:33,y:33},{x:33,y:63},{x:33,y:78},{x:48,y:3},{x:48,y:18},{x:48,y:33},{x:48,y:48},{x:48,y:63},{x:48,y:78},{x:48,y:93},{x:63,y:18},{x:63,y:33},{x:63,y:48},{x:63,y:63},{x:63,y:78},{x:78,y:33},{x:78,y:48},{x:78,y:63},{x:93,y:48}],u=function(e){var s=e.secondaryColor,n=e.speed,t=e.still,r=e.thickness,l=f(e,["secondaryColor","speed","still","thickness"]),d={animation:"spinners-react-diamond "+140/n+"s steps(2, end) infinite"};return t&&(d.animation="none"),a.createElement("svg",i({fill:"currentColor"},l,{viewBox:"0 0 96 96"}),x.map(function(o){return a.createElement("circle",{key:o.x+"-"+o.y,cx:o.x,cy:o.y,fill:s,r:2.5*(r/100)})}),a.createElement("g",{style:d},x.filter(function(o,y){return y<5}).map(function(o){return a.createElement("circle",{key:"h-"+o.x+"-"+o.y,cx:o.x,cy:o.y,r:3.5*(r/100)})})))};u.defaultProps=m;p(u);var S=p(u);const w=h.div`
+  width: 100%;
+  display: flex;
+  justify-content: center;
+`,O=h.div`
+  border-radius: 30px;
+  padding: 12px;
+  width: ${({$prop:e})=>e}px;
+  background: #fff;
+  border: none;
+`,z=()=>c.jsx(w,{children:c.jsx(S,{style:{width:"100"}})}),I=({width:e})=>c.jsx(O,{$prop:e,children:c.jsx(j,{})});export{z as L,I as a};
