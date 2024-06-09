@@ -19,14 +19,14 @@ const Profile = () => {
     const fetchUser = async () => {
       const storedUserData = localStorage.getItem('petLoveUserData');
 
-      if (storedUserData) {
+      if (storedUserData && storedUserData !== '[]') {
         const user = JSON.parse(storedUserData);
 
-        safeToken(user.token);
+        safeToken(user?.token);
         const res = await dispatch(getCurrentUser());
 
         if (res.error?.message === 'Rejected') {
-          toast(res.payload);
+          navigate('/login');
         }
         setUserData(res.payload);
         setFavoritsPetsArray(res.payload.noticesFavorites);
