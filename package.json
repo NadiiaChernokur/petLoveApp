@@ -31,7 +31,6 @@
     "redux-persist": "^6.0.0",
     "spinners-react": "^1.0.7",
     "styled-components": "^6.0.7",
-    "vite-plugin-svgr": "^3.2.0",
     "yup": "^1.4.0"
   },
   "devDependencies": {
@@ -48,7 +47,8 @@
     "husky": "^8.0.3",
     "lint-staged": "^14.0.1",
     "prettier": "3.0.3",
-    "vite": "^4.4.5"
+    "vite": "^4.4.5",
+    "vite-plugin-svgr": "^4.2.0"
   },
   "lint-staged": {
     "*.{js,jsx}": "eslint --cache --fix",

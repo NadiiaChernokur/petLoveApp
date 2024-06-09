@@ -1,5 +1,5 @@
-import { Route, Routes } from 'react-router-dom';
-import React from 'react';
+import { Route, Router, Routes } from 'react-router-dom';
+import React, { Suspense } from 'react';
 import SharedLayout from './components/SharedLayout/SharedLayout';
 import { AppWrapper } from './App.styled';
 // import Registration from './components/Registration/Registration';
@@ -28,19 +28,22 @@ const ErrorPage = lazy(() => import('./pages/ErrorPage/ErrorPage'));
 function App() {
   return (
     <AppWrapper>
-      <Routes>
-        <Route path="/" element={<SharedLayout />}>
-          <Route path="/home" element={<Home />} />
-          <Route path="/register" element={<Registration />} />
-          <Route path="/login" element={<Login />}></Route>
-          <Route path="/news" element={<News />}></Route>
-          <Route path="/friends" element={<Friends />}></Route>
-          <Route path="/notices" element={<Notices />}></Route>
-          <Route path="/add-pet" element={<AddPet />}></Route>
-          <Route path="/profile" element={<Profile />}></Route>
-          <Route path="*" element={<ErrorPage />} />
-        </Route>
-      </Routes>
+      <Suspense fallback={<div>Loading...</div>}>
+        <Routes>
+          <Route path="/" element={<SharedLayout />}>
+            <Route index element={<Home />} />
+            <Route path="/home" element={<Home />} />
+            <Route path="/register" element={<Registration />} />
+            <Route path="/login" element={<Login />}></Route>
+            <Route path="/news" element={<News />}></Route>
+            <Route path="/friends" element={<Friends />}></Route>
+            <Route path="/notices" element={<Notices />}></Route>
+            <Route path="/add-pet" element={<AddPet />}></Route>
+            <Route path="/profile" element={<Profile />}></Route>
+            <Route path="*" element={<ErrorPage />} />
+          </Route>
+        </Routes>
+      </Suspense>
     </AppWrapper>
   );
 }
