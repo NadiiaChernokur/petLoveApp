@@ -70,9 +70,6 @@ export const FriendImg = styled.img`
   width: 90px;
   height: 90px;
   cursor: pointer;
-  /* &:hover {
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  } */
 `;
 export const FriendsInfDiv = styled.div`
   width: 196px;

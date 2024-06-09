@@ -8,7 +8,7 @@ export const RegistrationContainer = styled.div`
   display: flex;
   gap: 32px;
   justify-content: space-between;
-  /* justify-content: center; */
+
   @media screen and (max-width: 1280px) {
     flex-direction: column;
     margin: auto;
@@ -73,7 +73,7 @@ export const CatImg = styled.div`
 `;
 export const NameDiv = styled.div`
   display: flex;
-  /* gap: 53px; */
+
   justify-content: space-between;
   width: 100%;
 `;
@@ -89,7 +89,6 @@ export const CatDiv = styled.div`
   display: flex;
   flex-direction: column;
   gap: 8px;
-  /* width: 194px; */
 `;
 export const Birthday = styled.div`
   font-weight: 500;
@@ -167,6 +166,10 @@ export const RegButton = styled.button`
   letter-spacing: -0.03em;
   text-transform: uppercase;
   color: #fff;
+  cursor: pointer;
+  &:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
 `;
 
 export const HaveAnAccount = styled.p`
@@ -184,6 +187,10 @@ export const HaveAnAccountSpan = styled.span`
   text-decoration: underline;
   text-decoration-skip-ink: none;
   color: #f6b83d;
+  cursor: pointer;
+  &:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
 `;
 export const ErrorText = styled.div`
   color: red;
@@ -202,4 +209,8 @@ export const RegEye = styled.svg`
   position: absolute;
   top: 16px;
   right: 42px;
+  cursor: pointer;
+  &:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
 `;

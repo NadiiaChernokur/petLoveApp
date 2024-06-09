@@ -53,7 +53,7 @@ export const AddPetFormContainer = styled.div`
   border-radius: 60px;
   width: 592px;
   min-width: 592px;
-  /* height: 654px; */
+
   padding: 60px 80px;
   background: #fff;
   @media screen and (min-width: 768px) and (max-width: 1280px) {
@@ -101,7 +101,7 @@ export const AddPetRadioFemaleLabel = styled.label`
   padding: 6px;
   width: 40px;
   height: 40px;
-  /* background: ${({ $bgColor }) => $bgColor}; */
+
   text-align: center;
   line-height: 40px;
 
@@ -118,51 +118,20 @@ export const AddPetRadioFemaleLabel = styled.label`
     stroke: #fff;
   }
 `;
-// export const AddPetRadioMaleLabel = styled.label`
-//   cursor: pointer;
-//   position: relative;
-//   display: block;
-//   border: none;
-//   border-radius: 30px;
-//   width: 40px;
-//   height: 40px;
-//   background: rgba(84, 173, 255, 0.1);
-//   text-align: center;
 
-//   ${AddPetRadio}:checked + & {
-//     background: green;
-//     mix-blend-mode: multiply;
-//   }
-// `;
 export const Form = styled.form`
   width: 432px;
   @media screen and (max-width: 767px) {
     width: 100%;
   }
 `;
-// export const AddPetRadioMultipleLabel = styled.label`
-//   cursor: pointer;
-//   position: relative;
-//   display: block;
-//   border: none;
-//   border-radius: 30px;
-//   width: 40px;
-//   height: 40px;
-//   background: #fff4df;
-//   text-align: center;
 
-//   ${AddPetRadio}:checked + & {
-//     background: green;
-//     mix-blend-mode: multiply;
-//   }
-// `;
 export const AddPetPhoto = styled.img`
   border-radius: 100px;
   width: 86px;
   height: 86px;
   margin: auto;
   background: pink;
-  /* margin-bottom: 12px; */
 `;
 export const AddPetAddPhoto = styled.input`
   display: none;
@@ -208,7 +177,7 @@ export const FormInput = styled.input`
   border: 1px solid #f6b83d;
   border-radius: 30px;
   padding: 16px;
-  /* width: 432px; */
+
   width: 100%;
   margin-bottom: 18px;
 `;

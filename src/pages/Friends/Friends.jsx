@@ -27,9 +27,7 @@ const Friends = () => {
         const array = await dispatch(getFriends());
 
         setFriendsArray(array.payload);
-      } catch (error) {
-        console.error('Failed to fetch friends:', error);
-      }
+      } catch (error) {}
     };
     fetchFriends();
   }, [dispatch]);

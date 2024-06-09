@@ -1,16 +1,7 @@
-import { Route, Router, Routes } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
 import React, { Suspense } from 'react';
 import SharedLayout from './components/SharedLayout/SharedLayout';
 import { AppWrapper } from './App.styled';
-// import Registration from './components/Registration/Registration';
-// import Login from './components/Login/Login';
-// import News from './pages/News/News';
-// import Friends from './pages/Friends/Friends';
-// import Notices from './pages/Notices/Notices';
-// import Home from './pages/Home/Home';
-// import AddPet from './pages/AddPet/AddPet';
-// import ErrorPage from './pages/ErrorPage/ErrorPage';
-// import Profile from './pages/Profile/Profile';
 import { lazy } from 'react';
 
 const Home = lazy(() => import('./pages/Home/Home'));

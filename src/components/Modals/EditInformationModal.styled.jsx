@@ -56,6 +56,10 @@ export const Save = styled.button`
   letter-spacing: -0.03em;
   color: #fff;
   border: none;
+  cursor: pointer;
+  &:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
   @media screen and (max-width: 767px) {
     width: 100%;
   }
@@ -109,11 +113,14 @@ export const UploadPhoto = styled.button`
   display: flex;
   align-items: center;
   gap: 8px;
+  cursor: pointer;
+  &:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
 `;
 export const ProfileFormModalDiv = styled.div`
   display: flex;
-  /* align-items: center;
-  justify-content: center; */
+
   background: #fff4df;
   border-radius: 100px;
   width: 110px;

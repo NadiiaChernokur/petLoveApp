@@ -16,7 +16,6 @@ import { getFriends } from './operation';
 import { getNotices } from './operation';
 import { getNoticesCategories } from './operation';
 import { getNoticesResponse } from './operation';
-// import { getLocation } from './operation';
 
 const initialState = {
   newsArray: [],
@@ -37,24 +36,20 @@ const initialState = {
   error: null,
 };
 
-const handlePending = (state) => {
+const handlePending = state => {
   state.isLoading = true;
 };
-const handlePendingCategory = (state) => {
+const handlePendingCategory = state => {
   state.isLoadingCategory = true;
 };
-// const handlePendingLocation = (state) => {
-//   state.isLoadingLocation = true;
-// };
 
 const handleRejected = (state, action) => {
   state.isLoading = false;
   state.error = action.payload;
 };
-const getNoticesCategoriesFulfilled = (state) => {
+const getNoticesCategoriesFulfilled = state => {
   state.isLoadingCategory = false;
   state.error = null;
-  //   state.categoriesArray = action.payload;
 };
 
 const getNewsFulfilled = (state, action) => {
@@ -78,17 +73,16 @@ const addPetFulfilled = (state, action) => {
   state.error = null;
   state.newPet = action.payload;
 };
-const deletePetFulfilled = (state) => {
+const deletePetFulfilled = state => {
   state.isLoading = false;
   state.error = null;
-  // state.newPet = action.payload;
 };
 const getSpeciesFulfilled = (state, action) => {
   state.isLoading = false;
   state.error = null;
   state.species = action.payload;
 };
-const logOutFulfilled = (state) => {
+const logOutFulfilled = state => {
   state.isLoading = false;
   state.error = null;
   state.user = [];
@@ -115,12 +109,7 @@ const editUserFulfilled = (state, action) => {
   state.error = null;
   state.user = action.payload;
 };
-// const getLocationFulfilled = (state, action) => {
-//   state.isLoading = false;
-//   state.error = null;
-//   console.log(action.payload);
-//   state.location = action.payload;
-// };
+
 const getNoticesResponseFulfilled = (state, action) => {
   state.isLoading = false;
   state.error = null;
@@ -140,7 +129,7 @@ const removeFulfilled = (state, action) => {
 const petsSlice = createSlice({
   name: 'pets',
   initialState: initialState,
-  extraReducers: (builder) =>
+  extraReducers: builder =>
     builder
       .addCase(getNews.pending, handlePending)
       .addCase(getNews.fulfilled, getNewsFulfilled)

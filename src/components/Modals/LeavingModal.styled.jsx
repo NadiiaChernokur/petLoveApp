@@ -35,6 +35,10 @@ export const LeavingModalCancel = styled.button`
   letter-spacing: -0.03em;
   color: #262626;
   border: none;
+  cursor: pointer;
+  &:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
 `;
 export const LeavingModalButtons = styled.div`
   display: flex;

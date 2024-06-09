@@ -17,9 +17,11 @@ export const PageButton = styled.button`
   border-radius: 100%;
   border: 1px solid rgba(38, 38, 38, 0.2);
   background: none;
-  /* font-weight: 700;
-  font-size: 18px;
-  line-height: 122%; */
+  cursor: pointer;
+  &:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+
   @media screen and (max-width: 767px) {
     width: 40px;
     height: 40px;
@@ -48,6 +50,7 @@ export const PageSpan = styled.span`
   font-weight: 700;
   font-size: 18px;
   line-height: 122%;
+
   @media screen and (max-width: 767px) {
     width: 33px;
     height: 33px;
@@ -67,6 +70,7 @@ export const PageSpanActiv = styled.span`
   font-size: 18px;
   line-height: 122%;
   text-align: center;
+
   @media screen and (max-width: 767px) {
     width: 33px;
     height: 33px;

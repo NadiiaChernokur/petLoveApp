@@ -48,8 +48,7 @@ export const NoticesField = styled(Field)`
   height: 48px;
   background: #fff;
   border: none;
-  /* -webkit-appearance: none;
-  -moz-appearance: none; */
+
   appearance: none;
   &:hover {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -131,8 +130,6 @@ export const GenderCategoryDiv = styled.div`
   display: flex;
   gap: 8px;
   @media screen and (max-width: 767px) {
-    /* display: flex;
-    gap: 8px; */
     width: 100%;
   }
 `;

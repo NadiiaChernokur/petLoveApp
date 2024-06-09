@@ -25,9 +25,6 @@ export const ProfileFormFirstDiv = styled.div`
     justify-content: space-between;
     position: relative;
   }
-  /* @media screen and (max-width: 767px) {
-    justify-content: space-between;
-  } */
 `;
 export const ProfileFormUser = styled.div`
   border-radius: 30px;
@@ -46,14 +43,7 @@ export const ProfileFormUser = styled.div`
   gap: 4px;
 `;
 
-export const ProfileFormImg = styled.img`
-  /* border-radius: 100px;
-  width: 110px;
-  height: 110px;
-  background: #fff4df;
-  display: flex;
-  margin-bottom: 8px; */
-`;
+export const ProfileFormImg = styled.img``;
 export const ProfileFormImputDiv = styled.div`
   @media screen and (min-width: 768px) and (max-width: 1280px) {
     width: 305px;
@@ -70,12 +60,6 @@ export const ProfileFormDiv = styled.div`
   border-radius: 100px;
   width: 110px;
   height: 110px;
-  /* border-radius: 100px;
-  width: 110px;
-  height: 110px;
-   background: #fff4df; 
-  display: flex;
-  margin-bottom: 8px;  */
 `;
 
 export const ProfileFormPhotoInput = styled.input`

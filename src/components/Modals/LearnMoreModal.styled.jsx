@@ -23,7 +23,6 @@ export const ModalContainer = styled.div`
   align-items: center;
   @media screen and (max-width: 767px) {
     width: 335px;
-    /* padding: 0 28px; */
   }
 `;
 export const LearnMoreModalImg = styled.img`
@@ -51,6 +50,10 @@ export const LearnMoreSvg = styled.svg`
   position: absolute;
   top: 20px;
   right: 24px;
+  cursor: pointer;
+  &:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
 `;
 
 export const LearnMoreModalName = styled.p`

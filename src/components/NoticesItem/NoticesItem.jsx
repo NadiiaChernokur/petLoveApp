@@ -38,7 +38,6 @@ const NoticesItem = ({ array, del }) => {
   const [isAttentionModal, setIsAttentionModal] = useState(false);
   const isLoad = useSelector(state => state.isLoading);
 
-  // const [userDataFavorId, setUserDataFavorId] = useState([]);
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
@@ -73,10 +72,7 @@ const NoticesItem = ({ array, del }) => {
   const closeModalAttention = () => {
     setIsAttentionModal(false);
   };
-  // const toHeartClick = (id) => {
-  //   console.log(id);
-  //   setHeartClick(!heartClick);
-  // };
+
   const toggleHeartClick = async id => {
     if (!isToken) {
       setIsAttentionModal(true);
@@ -93,9 +89,7 @@ const NoticesItem = ({ array, del }) => {
         updatedFavorites = [...heartClick, id];
       }
       setHeartClick(updatedFavorites);
-    } catch (error) {
-      console.error('Error updating favorite item', error);
-    }
+    } catch (error) {}
   };
 
   const deleteClick = async id => {

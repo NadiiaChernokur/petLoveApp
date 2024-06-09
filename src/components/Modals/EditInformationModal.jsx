@@ -122,7 +122,6 @@ const EditInformationModal = ({ user, close }) => {
         </LearnMoreSvg>
         <Edit>Edit information</Edit>
         <form onSubmit={handleSubmit(onSubmit)}>
-          {/* <EditInformationModalImg> */}
           <ProfileFormModalDiv>
             {selectedFile ? (
               <ProfileFormModalImg src={selectedFile} alt="selected photo" />
@@ -142,7 +141,7 @@ const EditInformationModal = ({ user, close }) => {
               onChange={handleFileChange}
             />
           </ProfileFormModalDiv>
-          {/* </EditInformationModalImg> */}
+
           <EditInformationPhoto>
             <div>
               <EditInformationInput
@@ -166,6 +165,7 @@ const EditInformationModal = ({ user, close }) => {
               {...register('name')}
               defaultValue={user?.name}
               placeholder="Name"
+              type="text"
             />
             {errors.name && <ErrorMessage>{errors.name.message}</ErrorMessage>}
           </div>
@@ -175,6 +175,7 @@ const EditInformationModal = ({ user, close }) => {
               {...register('email')}
               defaultValue={user?.email}
               placeholder="Email"
+              type="email"
             />
             {errors.email && (
               <ErrorMessage>{errors.email.message}</ErrorMessage>
@@ -187,7 +188,6 @@ const EditInformationModal = ({ user, close }) => {
               {...register('phone')}
               defaultValue={user?.phone || '+380'}
               placeholder="+380"
-              // type="number"
               type="text"
             />
             {errors.phone && (

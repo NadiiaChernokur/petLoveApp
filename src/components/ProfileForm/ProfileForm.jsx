@@ -20,9 +20,9 @@ import {
   UploadUserButton,
 } from './ProfileForm.styled';
 import React from 'react';
-// import * as yup from 'yup';
+
 import { useForm } from 'react-hook-form';
-// import { yupResolver } from '@hookform/resolvers/yup';
+
 import sprsvg from '../../img/sprite2.svg';
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
@@ -36,91 +36,18 @@ import MyPetsList from '../MyPets/MyPets';
 import EditInformationModal from '../Modals/EditInformationModal';
 import LeavingModal from '../Modals/LeavingModal';
 
-// const schema = yup.object().shape({
-//   name: yup.string().required('Name is required'),
-//   email: yup
-//     .string()
-//     .matches(
-//       /^[\w-]+(\.[\w-]+)*@([\w-]+\.)+[a-zA-Z]{2,7}$/,
-//       'Invalid email format'
-//     )
-//     .required('Email is required'),
-//   avatar: yup
-//     .string()
-//     .matches(/^https?:\/\/.*\.(?:png|jpg|jpeg|gif|bmp|webp)$/, 'Invalid URL')
-//     .required('Avatar URL is required'),
-//   phone: yup
-//     .string()
-//     .matches(/^\+38\d{10}$/, 'Invalid phone number format')
-//     .required('Phone number is required'),
-// });
-
 const ProfileForm = ({ userData }) => {
-  // const [userData, setUserData] = useState([]);
   const [isUploadUserModal, setIsUploadUserModal] = useState(false);
   const [isLogOutModal, setIsLogOutModal] = useState(false);
-  // const [selectedFile, setSelectedFile] = useState(null);
+
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const {
     register,
-    // handleSubmit,
-    // control,
-    // setError,
-    // setValue,
+
     formState: { errors },
-  } = useForm({
-    // resolver: yupResolver(schema),
-    // defaultValues: {
-    //   name: name,
-    //   email,
-    //   avatar,
-    //   phone,
-    // },
-  });
+  } = useForm({});
 
-  // useEffect(() => {
-  //   const fetchUser = async () => {
-  //     const storedUserData = localStorage.getItem('petLoveUserData');
-  //     console.log(storedUserData);
-  //     if (storedUserData) {
-  //       const user = JSON.parse(storedUserData);
-  //       console.log(user.token);
-  //       safeToken(user.token);
-  //       const res = await dispatch(getCurrentUser());
-  //       setUserData(res.payload);
-  //       // console.log(res.payload);
-  //       // addArray(res.payload);
-
-  //       console.log(res.payload);
-  //     } else {
-  //       navigate('/login');
-  //     }
-  //   };
-  //   fetchUser();
-  // }, [addArray, dispatch, navigate]);
-
-  // const onSubmit = async (data) => {
-  //   try {
-  //     console.log(data);
-
-  //   } catch (error) {
-  //     setError('apiError', { message: error.response.data.message });
-  //   }
-  // };
-  // const DownloadImg = () => {
-  //   document.getElementById('avatar').click();
-  // };
-  // const handleFileChange = (event) => {
-  //   const file = event.target.files[0];
-  //   console.log(URL.createObjectURL(file));
-
-  //   if (file) {
-  //     const blobUrl = URL.createObjectURL(file);
-  //     setSelectedFile(blobUrl);
-  //     setValue('avatar', blobUrl);
-  //   }
-  // };
   const logout = async () => {
     const res = await dispatch(logOut());
     localStorage.setItem('petLoveUserData', JSON.stringify([]));
@@ -152,7 +79,6 @@ const ProfileForm = ({ userData }) => {
     <ProfileFormContainer>
       <ToastContainer toastStyle={{ background: '#f30e0e', color: 'white' }} />
       <div>
-        {/* <form onSubmit={handleSubmit(onSubmit)}> */}
         <form>
           <ProfileFormFirstDiv>
             <ProfileFormUser>
@@ -179,13 +105,12 @@ const ProfileForm = ({ userData }) => {
                   type="file"
                   accept="image/png, image/jpeg, image/gif, image/bmp, image/webp"
                   {...register('avatar')}
-                  // onChange={handleFileChange}
                 />
                 {errors.avatar && (
                   <ErrorMessage>{errors.avatar.message}</ErrorMessage>
                 )}
               </ProfileFormDiv>
-              {/* <UploadPhotoButton type="button" onClick={DownloadImg}> */}
+
               <UploadPhotoButton type="button" onClick={uploadUserModal}>
                 Upload photo
               </UploadPhotoButton>

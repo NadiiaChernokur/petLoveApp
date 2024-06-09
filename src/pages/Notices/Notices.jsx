@@ -6,6 +6,7 @@ import { NoticesContainer, NoticesTitel } from './Notices.styled';
 import { useEffect, useState } from 'react';
 import { getNotices } from '../../redux/operation';
 import React from 'react';
+import { Loader } from 'components/Loader/Loader';
 const Notices = () => {
   const [noticesArray, setNoticesArray] = useState([]);
   const [newArray, setNewArray] = useState([]);
@@ -13,6 +14,7 @@ const Notices = () => {
   const [page, setPage] = useState(1);
   const [totalPages, setTotalPages] = useState(0);
   const dispatch = useDispatch();
+  const isLoad = useSelector(state => state.isLoading);
 
   useEffect(() => {
     const getArray = async () => {
@@ -23,9 +25,7 @@ const Notices = () => {
           setTotalPages(animals.payload.totalPages);
           return;
         }
-      } catch (error) {
-        console.log(error);
-      }
+      } catch (error) {}
     };
     getArray();
   }, [dispatch]);
@@ -64,7 +64,12 @@ const Notices = () => {
         total={toTotalPege}
         toFirst={firstPage}
       />
-      <NoticesItem array={schowNewArray ? newArray : noticesArray} />
+      {isLoad ? (
+        <Loader />
+      ) : (
+        <NoticesItem array={schowNewArray ? newArray : noticesArray} />
+      )}
+
       <Paginations
         add={addPage}
         subtract={subtractPage}

@@ -37,9 +37,7 @@ const Profile = () => {
     };
     fetchUser();
   }, [dispatch, navigate]);
-  // const toAddFavoritePetsArray = (array) => {
-  //   setFavoritsPetsArray(array);
-  // };
+
   return (
     <ProfileContainer>
       <ToastContainer toastStyle={{ background: '#f30e0e', color: 'white' }} />

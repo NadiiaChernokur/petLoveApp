@@ -50,18 +50,10 @@ const schema = yup.object().shape({
 
 const Login = () => {
   const [showPassword, setShowPassword] = useState(false);
-  // const [userName, setUserName] = useState('');
-  // const [userEmail, setUserEmail] = useState('');
-  // const [userData, setUserData] = useState(null);
+
   const navigate = useNavigate();
   const dispatch = useDispatch();
-  // useEffect(() => {
-  //   const storedUserData = localStorage.getItem('petLoveUserData');
-  //   console.log(storedUserData);
-  //   if (storedUserData) {
-  //     setUserData(JSON.parse(storedUserData));
-  //   }
-  // }, []);
+
   const handleNavigate = () => {
     navigate('/register');
   };
@@ -119,7 +111,6 @@ const Login = () => {
           }}
           onSubmit={values => {
             fetchLogin(values);
-            console.log(values);
           }}
           validationSchema={schema}
         >

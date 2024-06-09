@@ -21,7 +21,6 @@ const News = () => {
   const [totalPages, setTotalPages] = useState(0);
   const [search, setSearch] = useState(false);
   const dispatch = useDispatch();
-  // const newsArray = useSelector((state) => state.newsArray);
 
   useEffect(() => {
     const fetchNews = async () => {
@@ -61,6 +60,10 @@ const News = () => {
   const lastPage = () => {
     setPage(totalPages);
   };
+  const fetchKeyword = word => {
+    setKeyword(word);
+    setPage(1);
+  };
 
   return (
     <NewsContainer>
@@ -71,7 +74,7 @@ const News = () => {
             type="text"
             placeholder="Search"
             value={keyword}
-            onChange={e => setKeyword(e.target.value)}
+            onChange={e => fetchKeyword(e.target.value)}
           />
           <NewsButtonsDiv>
             {keyword && (

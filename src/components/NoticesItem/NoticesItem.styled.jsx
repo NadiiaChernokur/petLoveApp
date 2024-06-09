@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const NoticesItemContainer = styled.ul`
   display: flex;
   flex-wrap: wrap;
-  /* gap: 32px; */
+
   justify-content: space-between;
   min-width: 700px;
   @media screen and (min-width: 768px) and (max-width: 1280px) {
@@ -64,7 +64,7 @@ export const KindOfAnimalStar = styled.div`
 export const AnimalInformation = styled.div`
   display: flex;
   justify-content: space-between;
-  /* gap: 20px; */
+
   font-weight: 500;
   font-size: 12px;
   line-height: 117%;
@@ -150,7 +150,7 @@ export const NoticesPDiv = styled.div`
     top: 100%;
     left: 0;
     width: max-content;
-    max-width: 300px; /* Встановіть максимальну ширину для повного тексту */
+    max-width: 300px;
     z-index: 1;
   }
 `;

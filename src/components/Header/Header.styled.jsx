@@ -2,9 +2,6 @@ import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
 
 export const HeaderContainer = styled.div`
-  /* min-width: 1216px;
-  max-width: 1216px;
-  padding: 32px 64px; */
   min-width: 1216px;
   max-width: 1216px;
   padding: 32px;
@@ -100,6 +97,10 @@ export const ButtonsAuthSvgDiv = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
+  &:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
 `;
 export const ButtonsAuthP = styled.p`
   font-weight: 700;
@@ -107,6 +108,10 @@ export const ButtonsAuthP = styled.p`
   line-height: 100%;
   letter-spacing: -0.03em;
   color: #262626;
+  cursor: pointer;
+  &:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
   @media screen and (max-width: 767px) {
     display: none;
   }
@@ -142,6 +147,10 @@ export const ButtonLogOut = styled.button`
   letter-spacing: -0.03em;
   text-transform: uppercase;
   color: #fff;
+  cursor: pointer;
+  &:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
   @media screen and (max-width: 767px) {
     display: none;
   }

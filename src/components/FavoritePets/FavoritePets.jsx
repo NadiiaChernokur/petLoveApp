@@ -12,21 +12,7 @@ import NoticesItem from '../NoticesItem/NoticesItem';
 const FavoritePets = ({ favoritsPets, viewed }) => {
   const [activeButton, setActiveButton] = useState('favorites');
   const [petsArray, setPetsArray] = useState([]);
-  // const [myFavoritesArray, setMyFavoritesArray] = useState([]);
-  // const dispatch = useDispatch();
-  // console.log(pets);
 
-  // useEffect(() => {
-  //   setMyFavoritesArray(pets);
-  // }, [pets]);
-
-  // const petDelite = async (id) => {
-  //   const res = await dispatch(deletePet(id));
-  //   console.log(res);
-  //   setMyFavoritesArray((prevArray) =>
-  //     prevArray.filter((item) => item._id !== id)
-  //   );
-  // };
   useEffect(() => {
     setPetsArray(favoritsPets);
   }, [favoritsPets]);

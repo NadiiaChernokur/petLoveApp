@@ -33,12 +33,12 @@ import { useNavigate } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { addPet, getSpecies, safeToken } from '../../redux/operation';
-// import Select from 'react-select';
+
 import sprite from '../../img/sprite.svg';
 import sprit from '../../img/svg.svg';
 import spri from '../../img/sex.svg';
 import sprsvg from '../../img/sprite2.svg';
-// import photo from '../../img/dogAddpets.png';
+
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
@@ -67,7 +67,6 @@ const AddPet = () => {
   const {
     register,
     handleSubmit,
-
     setValue,
     formState: { errors },
   } = useForm({
@@ -214,7 +213,7 @@ const AddPet = () => {
               </svg>
             )}
           </PawDiv>
-          {/* <AddPetPhoto src={selectedFile} alt={'title'}></AddPetPhoto> */}
+
           <DownloadPhotoDiv>
             <div>
               <FormInputFile value={selectedFile} />
@@ -229,9 +228,7 @@ const AddPet = () => {
               accept="image/png, image/jpeg, image/gif, image/bmp, image/webp"
               onChange={handleFileChange}
             />
-            {/* {errors.imgURL && (
-              <ErrorMessage>{errors.imgURL.message}</ErrorMessage>
-            )} */}
+
             <CustomButton type="button" onClick={handleButtonClick}>
               Upload Photo
               <svg width="18" height="18">

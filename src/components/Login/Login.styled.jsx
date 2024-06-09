@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import photo from '../../img/dogLog.png';
-import { Field } from 'formik';
+
 import photoT from '../../img/dogLogT.png';
 import photoM from '../../img/dogLogM.png';
 
@@ -79,7 +79,7 @@ export const DogImg = styled.div`
 `;
 export const DogNameDiv = styled.div`
   display: flex;
-  /* gap: 53px; */
+
   justify-content: space-between;
   width: 100%;
 `;
@@ -102,7 +102,6 @@ export const DogDiv = styled.div`
   display: flex;
   flex-direction: column;
   gap: 8px;
-#
 `;
 export const DogBirthday = styled.div`
   font-weight: 500;
@@ -150,15 +149,20 @@ export const LogButton = styled.button`
   letter-spacing: -0.03em;
   text-transform: uppercase;
   color: #fff;
+  cursor: pointer;
+  &:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
 `;
-// export const RelativDiv = styled.div`
-//   position: relative;
-//   width: 100%;
-// `;
+
 export const LogEye = styled.svg`
   position: absolute;
   height: 22px;
   width: 22px;
   top: 15px;
   right: 20px;
+  cursor: pointer;
+  &:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
 `;

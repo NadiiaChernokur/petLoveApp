@@ -104,9 +104,7 @@ const NoticesFilters = ({ arrayByCategory, page, total, toFirst }) => {
           setPetTypes(categoriesResponse.payload.species);
           setCities(categoriesResponse.payload.location);
         }
-      } catch (error) {
-        console.error('Error fetching data', error);
-      }
+      } catch (error) {}
     };
 
     fetchData();
@@ -117,7 +115,6 @@ const NoticesFilters = ({ arrayByCategory, page, total, toFirst }) => {
       const copyArray = JSON.parse(JSON.stringify(cities));
 
       if (!Array.isArray(copyArray) || copyArray.length === 0) {
-        console.error('Cities array is empty or not an array');
         return;
       }
       const loc = copyArray.filter(location => {
@@ -137,9 +134,7 @@ const NoticesFilters = ({ arrayByCategory, page, total, toFirst }) => {
         value: l._id,
       }));
       setLocations(val);
-    } catch (error) {
-      console.error('Error fetching locations', error);
-    }
+    } catch (error) {}
   };
 
   const handleSelectChange = async (field, value, setFieldValue, values) => {
@@ -151,11 +146,6 @@ const NoticesFilters = ({ arrayByCategory, page, total, toFirst }) => {
     total(response.payload.totalPages);
     arrayByCategory(response.payload.results);
   };
-
-  // const radioClear = async (field, setFieldValue, values) => {
-  //   setCheck('');
-  //   await handleSelectChange(field, '', setFieldValue, values);
-  // };
 
   return (
     <NoticesFiltersContainer>
@@ -175,6 +165,7 @@ const NoticesFilters = ({ arrayByCategory, page, total, toFirst }) => {
             <SearchFieldDiv>
               <SearchField
                 name="keyword"
+                type="search"
                 placeholder="Search..."
                 onChange={async e => {
                   const value = e.target.value;
@@ -336,15 +327,6 @@ const NoticesFilters = ({ arrayByCategory, page, total, toFirst }) => {
                   }}
                 />
                 Popular
-                {/* <svg
-                  width="20"
-                  height="20"
-                  onClick={async () => {
-                    await radioClear('sortBy', setFieldValue, values);
-                  }}
-                >
-                  <use href={`${sprite}#x`}></use>
-                </svg> */}
               </CheckboxLabel>
               <CheckboxLabel
                 style={check === 'unpopular' ? { background: '#f6b83d' } : {}}
@@ -367,15 +349,6 @@ const NoticesFilters = ({ arrayByCategory, page, total, toFirst }) => {
                   }}
                 />
                 Unpopular
-                {/* <svg
-                  width="20"
-                  height="20"
-                  onClick={async () => {
-                    await radioClear('sortBy', setFieldValue, values);
-                  }}
-                >
-                  <use href={`${sprite}#x`}></use>
-                </svg> */}
               </CheckboxLabel>
               <CheckboxLabel
                 style={check === 'cheap' ? { background: '#f6b83d' } : {}}
@@ -387,7 +360,7 @@ const NoticesFilters = ({ arrayByCategory, page, total, toFirst }) => {
                   checked={check === 'cheap'}
                   onChange={async e => {
                     setCheck(prev => (prev === 'cheap' ? '' : 'cheap'));
-                    // setCheck('cheap');
+
                     setValuesArray(values);
                     const value = e.target.value;
                     await handleSelectChange(
@@ -399,15 +372,6 @@ const NoticesFilters = ({ arrayByCategory, page, total, toFirst }) => {
                   }}
                 />
                 Cheap
-                {/* <svg
-                  width="20"
-                  height="20"
-                  onClick={async () => {
-                    await radioClear('sortBy', setFieldValue, values);
-                  }}
-                >
-                  <use href={`${sprite}#x`}></use>
-                </svg> */}
               </CheckboxLabel>
               <CheckboxLabel
                 style={check === 'expensive' ? { background: '#f6b83d' } : {}}
@@ -430,15 +394,6 @@ const NoticesFilters = ({ arrayByCategory, page, total, toFirst }) => {
                   }}
                 />
                 Expensive
-                {/* <svg
-                  width="20"
-                  height="20"
-                  onClick={async () => {
-                    await radioClear('sortBy', setFieldValue, values);
-                  }}
-                >
-                  <use href={`${sprite}#x`}></use>
-                </svg> */}
               </CheckboxLabel>
             </CheckDiv>
           </NoticesForm>
