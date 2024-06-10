@@ -238,19 +238,27 @@ const AddPet = () => {
           </DownloadPhotoDiv>
           <div>
             <label></label>
-            <FormInput {...register('title')} placeholder="Title" />
+            <FormInput {...register('title')} placeholder="Title" type="text" />
             {errors.title && (
               <ErrorMessage>{errors.title.message}</ErrorMessage>
             )}
           </div>
           <div>
             <label></label>
-            <FormInput {...register('name')} placeholder="Pet’s Name" />
+            <FormInput
+              {...register('name')}
+              placeholder="Pet’s Name"
+              type="text"
+            />
             {errors.name && <ErrorMessage>{errors.name.message}</ErrorMessage>}
           </div>
           <BirthdayDiv>
             <div style={{ position: 'relative' }}>
-              <FormInput {...register('birthday')} placeholder="0000.00.00" />
+              <FormInput
+                {...register('birthday')}
+                placeholder="0000.00.00"
+                type="date"
+              />
               {errors.birthday && (
                 <ErrorMessage>{errors.birthday.message}</ErrorMessage>
               )}

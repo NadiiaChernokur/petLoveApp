@@ -121,7 +121,7 @@ const Registration = () => {
           validationSchema={schema}
         >
           <FormContainer>
-            <FieldFormik id="name" name="name" placeholder="Name" />
+            <FieldFormik id="name" name="name" placeholder="Name" type="text" />
             <ErrorMessage name="name" component={ErrorText} />
             <FieldFormik
               id="email"

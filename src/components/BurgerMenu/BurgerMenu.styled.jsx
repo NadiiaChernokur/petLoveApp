@@ -30,6 +30,10 @@ export const BurgerNavigationP = styled.p`
       : '1px solid rgba(255, 255, 255, 0.4)'};
   border-radius: 30px;
   color: ${({ $isHomePage }) => ($isHomePage ? '#262626' : '#fff')};
+  cursor: pointer;
+  &:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
 `;
 
 export const BurgenButtonsDiv = styled.div`
@@ -66,7 +70,7 @@ export const BurgenButtonLog = styled.button`
   color: #fff;
   white-space: nowrap;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-
+  cursor: pointer;
   &:hover {
     box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
   }
@@ -91,7 +95,7 @@ export const BurgerButtonReg = styled.button`
   color: #f6b83d;
   white-space: nowrap;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-
+  cursor: pointer;
   &:hover {
     box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
   }
@@ -123,5 +127,11 @@ export const BurgerLogOut = styled.button`
   line-height: 125%;
   letter-spacing: -0.03em;
   text-transform: uppercase;
+  cursor: pointer;
+
   color: ${({ $isHomePage }) => ($isHomePage ? '#fff4df' : '#f6b83d')};
+
+  &:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
 `;

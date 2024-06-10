@@ -127,6 +127,7 @@ const ProfileForm = ({ userData }) => {
               <label htmlFor="name"></label>
               <FormInput
                 id="name"
+                type="text"
                 {...register('name')}
                 value={userData?.name}
               />
@@ -139,6 +140,7 @@ const ProfileForm = ({ userData }) => {
               <label htmlFor="email"></label>
               <FormInput
                 id="email"
+                type="email"
                 {...register('email')}
                 value={userData?.email}
               />
@@ -151,6 +153,7 @@ const ProfileForm = ({ userData }) => {
               <label htmlFor="phone"></label>
               <FormInput
                 id="phone"
+                type="tel"
                 {...register('phone')}
                 placeholder="+380"
                 value={userData?.phone}
